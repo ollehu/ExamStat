@@ -12,8 +12,8 @@ public class ExamStat {
 		
 		//queue.add("TAMS65");
 		//queue.add("TAMS79");
-		//queue.add("TATA41");
-		queue.add("TSKS10");
+		queue.add("TATA41");
+		//queue.add("TSKS10");
 		
 		for (String s : queue){
 			ExamParser parser = new ExamParser(s);

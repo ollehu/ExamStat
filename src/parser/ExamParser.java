@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class ExamParser {
-
+	
 	
 	ArrayList<Exam> examList = new ArrayList<Exam>();
 	
@@ -103,7 +103,7 @@ public class ExamParser {
 	}
 
 	public float getAverage(){
-		int average = 0;
+		float average = 0;
 		for (Exam exam : examList){
 			average += exam.getAverage();
 		}

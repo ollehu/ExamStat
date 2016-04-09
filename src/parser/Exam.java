@@ -21,7 +21,7 @@ public class Exam {
 	}
 
 	public void print(){
-		System.out.println(String.format("Course: %s Date: %s (%d U) (%d 3) (%d 4) (%d 5) with average %f. \n", courseName, examDate, fail, three, four, five, getAverage()));
+		System.out.println(String.format("Course: %s Date: %s (%d U) (%d 3) (%d 4) (%d 5) with average %f.", courseName, examDate, fail, three, four, five, getAverage()));
 	}
 
 	public float getAverage(){
