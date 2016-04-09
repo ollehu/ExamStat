@@ -32,5 +32,9 @@ public class Exam {
 		}
 	}
 	
+	public float getPassedPercentage(){
+		return (float)(three + four + five)/(float)(fail + three + four + five);
+	}
+	
 	
 }

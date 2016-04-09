@@ -19,6 +19,7 @@ public class ExamStat {
 			ExamParser parser = new ExamParser(s);
 			System.out.println("Average for course " + s + " is " + parser.getAverage());
 			System.out.println("With " + parser.numberOfExams() + " number of exams.");
+			System.out.println("With " + parser.getPassedPercentage() + "% passed");
 			System.out.println("Exams:");
 			parser.printExams();
 		}

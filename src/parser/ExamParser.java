@@ -120,5 +120,14 @@ public class ExamParser {
 			exam.print();
 		}
 	}
+	
+	public float getPassedPercentage(){
+		float passedPercentage = 0;
+		for (Exam exam : examList){
+			passedPercentage += exam.getPassedPercentage();
+		}
+		
+		return passedPercentage/(float)examList.size();
+	}
 
 }
