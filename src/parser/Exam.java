@@ -21,19 +21,19 @@ public class Exam {
 	}
 
 	public void print(){
-		System.out.println(String.format("Course: %s Date: %s (%d U) (%d 3) (%d 4) (%d 5) with average %f.", courseName, examDate, fail, three, four, five, getAverage()));
+		System.out.println(String.format("Course: %s Date: %s (%d U) (%d 3) (%d 4) (%d 5) with average %f and pass %f.", courseName, examDate, fail, three, four, five, getAverage(), getPassedPercentage()));
 	}
 
 	public float getAverage(){
 		if (three + four + five > 0){
-			return (float)(three*3 + four*4 + five*5)/(float)(three + four + five);
+			return (float)(three + four*2 + five*3)/(float)(three + four + five);
 		} else {
 			return 0;
 		}
 	}
 	
 	public float getPassedPercentage(){
-		return (float)(three + four + five)/(float)(fail + three + four + five);
+		return 100*((float)(three + four + five)/(float)(fail + three + four + five));
 	}
 	
 	

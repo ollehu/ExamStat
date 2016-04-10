@@ -17,6 +17,8 @@ public class ExamParser {
 		parse(courseName);
 	}
 	
+	private String courseName;
+	
 	/**
 	 * Shortcut
 	 * @param courseName
@@ -108,7 +110,7 @@ public class ExamParser {
 			average += exam.getAverage();
 		}
 
-		return (float)average/(float)examList.size();
+		return ((float)average/(float)examList.size());
 	}
 	
 	public int numberOfExams(){
@@ -128,6 +130,51 @@ public class ExamParser {
 		}
 		
 		return passedPercentage/(float)examList.size();
+	}
+	
+	public int sumOfFail(){
+		int sum = 0;
+		for (Exam exam : examList){
+			sum += exam.fail;
+		}
+		return sum;
+	}
+	
+	public int sumOfThree(){
+		int sum = 0;
+		for (Exam exam : examList){
+			sum += exam.three;
+		}
+		return sum;
+	}
+	
+	public int sumOfFour(){
+		int sum = 0;
+		for (Exam exam : examList){
+			sum += exam.four;
+		}
+		return sum;
+	}
+	
+	public int sumOfFive(){
+		int sum = 0;
+		for (Exam exam : examList){
+			sum += exam.five;
+		}
+		return sum;
+	}
+	
+	public ArrayList<String> getTableRow(){
+		ArrayList<String> row = new ArrayList<String>();
+		row.add(courseName);
+		row.add(Integer.toString(sumOfFail()));
+		row.add(Integer.toString(sumOfThree()));
+		row.add(Integer.toString(sumOfFour()));
+		row.add(Integer.toString(sumOfFive()));
+		row.add(Float.toString(getAverage()));
+		row.add(Float.toString(getPassedPercentage()));
+		return row;
+		
 	}
 
 }
